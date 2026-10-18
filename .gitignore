@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Private configuration
+.env
+
+# Local database
+chat_history.db
+
+# Test cache
+.pytest_cache/
+
+# Editors and operating systems
+.vscode/
+.DS_Store
+Thumbs.db
+.env
+__pycache__/
+.pytest_cache/
+venv/
+.venv/
+chat_history.db

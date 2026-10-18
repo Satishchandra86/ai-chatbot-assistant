@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AI Chatbot Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+        defer
+    ></script>
+</head>
+
+<body>
+    <main class="app">
+        <header class="header">
+            <div class="logo">AI</div>
+
+            <div class="header-text">
+                <h1>AI Chatbot Assistant</h1>
+                <p>Your personal AI helper</p>
+            </div>
+
+            <button id="clearButton" class="clear-button" type="button">
+                Clear Chat
+            </button>
+        </header>
+
+        <section id="chatMessages" class="chat-messages"
+                 aria-live="polite">
+            <div class="welcome">
+                <h2>How can I help you?</h2>
+                <p>Ask a question or choose an example below.</p>
+
+                <div class="suggestions">
+                    <button type="button" class="suggestion"
+                            data-prompt="Explain artificial intelligence simply">
+                        Explain AI
+                    </button>
+
+                    <button type="button" class="suggestion"
+                            data-prompt="Teach me a Python example">
+                        Learn Python
+                    </button>
+
+                    <button type="button" class="suggestion"
+                            data-prompt="Help me plan my day">
+                        Plan my day
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <form id="chatForm" class="composer">
+            <label for="messageInput" class="sr-only">
+                Enter your message
+            </label>
+
+            <textarea
+                id="messageInput"
+                name="message"
+                placeholder="Type your message..."
+                rows="1"
+                maxlength="4000"
+                required
+            ></textarea>
+
+            <button id="sendButton" type="submit">Send</button>
+        </form>
+
+        <footer>
+            AI can make mistakes. Verify important information.
+        </footer>
+    </main>
+</body>
+</html>
