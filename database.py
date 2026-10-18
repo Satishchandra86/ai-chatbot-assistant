@@ -1,7 +1,13 @@
+
+import os
 import sqlite3
 from pathlib import Path
 
-DB_PATH = Path(__file__).with_name("chat_history.db")
+DB_PATH = (
+    Path("/tmp/chat_history.db")
+    if os.getenv("VERCEL")
+    else Path(__file__).with_name("chat_history.db")
+)
 
 
 def connect():
